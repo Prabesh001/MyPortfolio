@@ -9,7 +9,6 @@ import TechStack from "@/components/sections/TechStack";
 import About from "@/components/sections/About";
 import Navbar from "@/components/sections/Navbar";
 import { HeroSection } from "@/components/sections/Hero";
-
 import Contact from "@/components/sections/Contact";
 
 const Portfolio = () => {
@@ -71,27 +70,29 @@ const Portfolio = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden pb-16 sm:pb-0 custom-scroll-container">
-      <Navbar
-        activeSection={activeSection}
-        scrollProgress={scrollProgress}
-        scrollToSection={scrollToSection}
-      />
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden pb-16 sm:pb-0 custom-scroll-container">
+        <Navbar
+          activeSection={activeSection}
+          scrollProgress={scrollProgress}
+          scrollToSection={scrollToSection}
+        />
 
-      <HeroSection />
+        <HeroSection />
 
-      <About />
+        <About />
 
-      <TechStack />
+        <TechStack />
 
-      <Projects />
+        <Projects />
 
-      <Experience />
+        <Experience />
 
-      <Contact />
+        <Contact />
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 export default Portfolio;

@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download } from "lucide-react";
 import { useTypingEffect } from "@/hooks/useTypingEffect";
 import { useParticleAnimation } from "@/hooks/useParticleAnimation";
+import SharinganContainer from "@/components/SharinganContainer";
 
 export function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -29,7 +29,7 @@ export function HeroSection() {
     <section
       ref={heroRef}
       id="home"
-      className="min-h-screen px-12 flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen sm:px-12 flex items-center justify-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10"></div>
@@ -88,11 +88,10 @@ export function HeroSection() {
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-2 gap-12 items-center">
           <div
-            className={`space-y-6 transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`space-y-6 transition-all duration-1000 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
             <div className="space-y-2">
               <p className="text-lg text-gray-400 animate-fade-in">Hi, I'm</p>
@@ -130,22 +129,16 @@ export function HeroSection() {
           </div>
 
           <div
-            className={`flex justify-center transition-all duration-1000 delay-300 ${
-              isVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-10"
-            }`}
+            className={`flex justify-center transition-all duration-1000 delay-300 ${isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-10"
+              }`}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative animate-float">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Prabesh Dahal"
-                  width={400}
-                  height={400}
-                  className="rounded-full select-none border-4 border-blue-400/30 relative z-10 hover:scale-105 transition-transform duration-300"
-                />
+                <SharinganContainer />
+
               </div>
             </div>
           </div>
@@ -154,11 +147,10 @@ export function HeroSection() {
         {/* Mobile Layout */}
         <div className="md:hidden pt-26 pb-16 flex flex-col items-center text-center space-y-8">
           <div
-            className={`space-y-4 transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`space-y-4 transition-all duration-1000 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
             <p className="text-lg text-gray-400 animate-fade-in">Hi, I'm</p>
             <h1 className="text-4xl font-bold">
@@ -176,32 +168,24 @@ export function HeroSection() {
           </div>
 
           <div
-            className={`transition-all duration-1000 delay-300 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`transition-all duration-1000 delay-300 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative animate-float">
-                <Image
-                  src="/placeholder.svg?height=300&width=300"
-                  alt="Prabesh Dahal"
-                  width={300}
-                  height={300}
-                  className="rounded-full border-4 border-blue-400/30 relative z-10"
-                />
+                <SharinganContainer size={300} />
               </div>
             </div>
           </div>
 
           <div
-            className={`space-y-4 transition-all duration-1000 delay-500 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`space-y-4 transition-all duration-1000 delay-500 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
             <div className="flex flex-wrap justify-center gap-3">
               <Badge

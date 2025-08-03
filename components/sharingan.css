@@ -1,0 +1,36 @@
+/* CSS */
+.origin-center {
+  transform-origin: center;
+}
+
+/* Rotate out - fade out + rotate 180deg */
+.rotate-out {
+  animation: rotateOut 600ms forwards ease-in-out;
+}
+
+/* Rotate in - fade in + rotate 180deg */
+.rotate-in {
+  animation: rotateIn 600ms forwards ease-in-out;
+}
+
+@keyframes rotateOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
